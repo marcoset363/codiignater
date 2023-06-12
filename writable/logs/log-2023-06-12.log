@@ -1,0 +1,34 @@
+ERROR - 2023-06-12 14:25:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT NULL,
+	`Precio`  int NOT NULL,
+	`Descripcion`  varchar NOT NULL,
+	`Stock` TI' at line 3 in C:\xampp\htdocs\codiignater\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codiignater\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `P...', 0)
+#1 C:\xampp\htdocs\codiignater\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `P...')
+#2 C:\xampp\htdocs\codiignater\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `P...')
+#3 C:\xampp\htdocs\codiignater\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `P...')
+#4 C:\xampp\htdocs\codiignater\app\Database\Migrations\2023-06-12-140305_Producto.php(39): CodeIgniter\Database\Forge->createTable('Producto')
+#5 C:\xampp\htdocs\codiignater\system\Database\MigrationRunner.php(877): App\Database\Migrations\Producto->up()
+#6 C:\xampp\htdocs\codiignater\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\codiignater\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\codiignater\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\codiignater\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\codiignater\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-06-12 14:26:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT NULL,
+	`Precio`  decimal NOT NULL,
+	`Descripcion`  varchar NOT NULL,
+	`Stock' at line 3 in C:\xampp\htdocs\codiignater\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codiignater\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `P...', 0)
+#1 C:\xampp\htdocs\codiignater\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `P...')
+#2 C:\xampp\htdocs\codiignater\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `P...')
+#3 C:\xampp\htdocs\codiignater\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `P...')
+#4 C:\xampp\htdocs\codiignater\app\Database\Migrations\2023-06-12-140305_Producto.php(39): CodeIgniter\Database\Forge->createTable('Producto')
+#5 C:\xampp\htdocs\codiignater\system\Database\MigrationRunner.php(877): App\Database\Migrations\Producto->up()
+#6 C:\xampp\htdocs\codiignater\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\codiignater\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\codiignater\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\codiignater\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\codiignater\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
