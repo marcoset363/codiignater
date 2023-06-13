@@ -37,6 +37,10 @@
                         <div class="precioagregar">
                             <label>Precio</label>
                             <input type="text" name="precio" class="form-control" required placeholder ="Precio producto">
+                        </div>                       
+                        <div class="precioagregar">
+                            <label>Stock</label>
+                            <input type="text" name="Stock" class="form-control" required placeholder ="Stock producto">
                         </div>
                         <div class="botonagregar">
                             <hr>

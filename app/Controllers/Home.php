@@ -26,7 +26,9 @@ class Home extends BaseController
             'nombrepro' => $this->request->getPost('nombre'),
             'descripcion' => $this->request->getPost('descripcion'),
             'link' => $imageName,
-            'precio' => $this->request->getPost('precio')
+            'precio' => $this->request->getPost('precio'),
+            'Stock' => $this->request->getPost('precio')
+
         ];
         $product->save($data);
         return redirect()->to('/mainstore')->with('status',"product data and image saved");
