@@ -18,7 +18,7 @@
     <body>
          <div class="login-container">
           <h2>Iniciar sesión</h2>
-          <a href="login.php" class="login-button">Iniciar sesión</a>
+          <a href="inicio.php" class="login-button">Iniciar sesión</a>
         </div>
 </body>
 </head>

@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>  
-<?php
-  // Aquí se puede utilizar lógica PHP para determinar la URL del archivo CSS
-  $cssFile = 'sesion.css';
-  ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo $cssFile; ?>">
-  <title>Iniciar sesión</title>
-  <link rel="stylesheet" href="<?= base_url("/public/sesion.css")?>">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script defer src="<?= base_url("/public/script.js")?>"></script>  
+    <link rel="stylesheet" href="<?= base_url("/public/sesion.css")?>">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Iniciar sesión</h2>
-    <form action="login.php" method="POST">
-      <input type="text" name="username" placeholder="Usuario" required>
-      <input type="password" name="password" placeholder="Contraseña" required>
-      <button type="submit">Iniciar sesión</button>
-    </form>
-  </div>
+<h1>Registrate y disfruta</h1>
+
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="" class="formulario__login">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" placeholder="Correo Electronico">
+                        <input type="password" placeholder="Contraseña">
+                        <button>Entrar</button>
+                    </form>
+
+                    <!--Register-->
+                    <form action="" class="formulario__register">
+                        <h2>Regístrarse</h2>
+                        <input type="text" placeholder="Nombre completo">
+                        <input type="text" placeholder="Correo Electronico">
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <button>Regístrarse</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
 </body>
 </html>
-<?php
-  // Verificar si se enviaron datos de inicio de sesión
-  if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Aquí puedes agregar la lógica de verificación de inicio de sesión
-    // Por simplicidad, este ejemplo solo comprueba si los campos no están vacíos
-    if (!empty($username) && !empty($password)) {
-      echo "Inicio de sesión exitoso. ¡Bienvenido, " . $username . "!";
-    } else {
-      echo "Usuario o contraseña incorrectos.";
-    }
-  }
-?>
-
