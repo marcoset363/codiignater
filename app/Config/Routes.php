@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
 $routes->post('/formoproduct', 'Home::formoproduct');
+$routes->get('/agregarproductos', 'Home::agregarproductos');
 
 /*
  * --------------------------------------------------------------------

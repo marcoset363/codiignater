@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <?php
+    `<?php
   // Aquí se puede utilizar lógica PHP para determinar la URL del archivo CSS
   $cssFile = 'estilo.css'
   ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo $cssFile; ?>">    
-    <script src="app.js" async></script>
+<link rel="stylesheet" href="<?= base_url("/public/estilo.css")?>">
+    <script defer src="<?= base_url("/public/app.js")?>" async></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title> Zarpale la lata </title>
-    <title>Iniciar sesión</title>
 </head>
     <body>
+        <h1>Tienda de zapas</h1>
          <div class="login-container">
-          <h2>Iniciar sesión</h2>
-          <a href="inicio.php" class="login-button">Iniciar sesión</a>
+          <a href="<?= base_url("/inicio")?>"
+          >Iniciar sesión</a>
         </div>
-</body>
+        <div class="login-container">
+          <a href="<?= base_url("/agregarproductos")?>"
+          >agregar productos</a>
+          <? if( adadad ) :
+    
+    
+        else : 
+    
+    
+    endif; ?>
+
+        </div></body>
 </head>
 <body>
-    <header>
-        <h1>Tienda de zapas</h1>
-    </header>
     <section class="contenedor">
-        < Contenedor de elementos 
 <div class="contenedor-items">
             <div class="item">
                 
@@ -92,7 +99,6 @@
         </div>
                   </div>
 </div>
-         Carrito de Compras 
         <div class="carrito" id="carrito">
             <div class="header-carrito">
                 <h2>Tu Carrito</h2>

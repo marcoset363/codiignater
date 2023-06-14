@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Controllers;
+    use App\Models\modelosprod;
+    use App\Models\productos;
+    use App\Models\modelosinicio;
+    use App\Models\login;
 
-class Home extends BaseController
+    class Home extends BaseController
 {
     public function index()
     {
@@ -14,6 +18,11 @@ class Home extends BaseController
     public function inicio()
     {
         return view('inicio');
+    }
+    
+    public function agregarproductos()
+    {
+        return view('agregarproductos');
     }
     public function formproduct(){
         $product =new productos();
